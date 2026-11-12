@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visualización interactiva del paisaje sonoro del Barrio Puerto de Valparaíso. Taller de Diseño de Servicios 2026, Grupo 2.">
+  <title>Halos Sonoros en la Ciudad Puerto</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+  <!-- Solo los cuatro caracteres de 鎮守の神 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&text=%E9%8E%AE%E5%AE%88%E3%81%AE%E7%A5%9E&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/campo.js" defer></script>
+  <script src="js/ficha.js" defer></script>
+  <script src="js/motor-audio.js" defer></script>
+  <script src="js/mezclador.js" defer></script>
+  <script src="js/mesa.js" defer></script>
+</head>
+
+<body>
+  <!-- Barra fija: enlace permanente entre las dos páginas -->
+  <header class="barra">
+    <a class="barra__marca" href="index.html">Halos Sonoros <span>· Barrio Puerto</span></a>
+    <nav class="barra__nav" aria-label="Páginas">
+      <a href="index.html" aria-current="page">Visualización</a>
+      <a href="proyecto.html">Proyecto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1 · Portada -->
+    <section class="lamina portada" id="portada">
+      <div>
+        <h1 class="display portada__titulo">Halos Sonoros<small>en la Ciudad Puerto</small></h1>
+        <p class="portada__frase">
+          Cada lugar tiene un halo, un sentir, un espíritu hecho de lo que suena en él.
+          En el Barrio Puerto ese espíritu está cubierto por un velo de motores, voces y máquinas.
+          Registramos <span class="portada__dato" data-dato="fichas">··</span> momentos.
+          Esto es lo que habita detrás.
+        </p>
+      </div>
+
+      <!-- 鎮守の神 ↔ Genius Loci: dos capas en la misma celda que se funden con desenfoque -->
+      <div class="kami-vertical" role="img" aria-label="鎮守の神, Chinju no Kami: deidad protectora de un lugar. Genius Loci: espíritu del lugar.">
+        <div class="kami-vertical__capa kami-vertical__capa--a" aria-hidden="true">
+          <span class="kami-vertical__kanji" lang="ja">鎮守の神</span>
+          <span class="kami-vertical__glosa mono">Chinju no Kami<br>deidad protectora de un lugar</span>
+        </div>
+        <div class="kami-vertical__capa kami-vertical__capa--b" aria-hidden="true">
+          <span class="kami-vertical__latin" lang="la">Genius Loci</span>
+          <span class="kami-vertical__glosa mono">Genius Loci<br>espíritu del lugar</span>
+        </div>
+      </div>
+
+      <!-- Anticipo: los kamis reales, tenues, en su posición del campo (hora × dB) -->
+      <a class="anticipo" href="#acercamiento" aria-label="Bajar al acercamiento">
+        <svg id="anticipo-svg" aria-hidden="true"></svg>
+        <span class="anticipo__bajar etiqueta">Bajar ↓</span>
+      </a>
+    </section>
+
+    <!-- 2 · El acercamiento (narrativa breve) -->
+    <section class="lamina acercamiento" id="acercamiento">
+      <div class="lamina__rotulo"><span class="etiqueta">Lámina 01 · El acercamiento</span></div>
+      <h2>El acercamiento</h2>
+
+      <div class="bloques">
+        <article class="bloque revelar">
+          <span class="bloque__n etiqueta">1 / 5</span>
+          <h3>Genius Loci</h3>
+          <p>Para los romanos, cada lugar tenía un espíritu protector propio. En el siglo XX la arquitectura recuperó la idea (Christian Norberg-Schulz) para hablar del carácter de un sitio: aquello que hace que un lugar sea ese lugar y no otro.</p>
+        </article>
+        <article class="bloque revelar">
+          <span class="bloque__n etiqueta">2 / 5</span>
+          <h3><span lang="ja" class="kanji">鎮守の神</span> · Chinju no Kami</h3>
+          <p>En Japón, la deidad que protege una localidad, ligada a un santuario y a su bosque. No está en todas partes: pertenece a un lugar y lo cuida.</p>
+        </article>
+        <article class="bloque revelar">
+          <span class="bloque__n etiqueta">3 / 5</span>
+          <h3>Por qué en el sonido</h3>
+          <p>Ese espíritu casi nunca se ve; se siente. Lo que suena en un lugar dice quién lo habita: el mar, las voces, los motores, las grúas. En el Barrio Puerto esos sonidos se superponen como un velo que cambia según la hora y el espacio, y que decide si las personas se quedan o siguen de largo.</p>
+        </article>
+        <article class="bloque revelar">
+          <span class="bloque__n etiqueta">4 / 5</span>
+          <h3>Qué se registró</h3>
+          <p><span data-dato="periodo">En 2026</span>, el Grupo 2 del Taller de Diseño de Servicios (e[ad] PUCV) observó cuatro lugares del Barrio Puerto. En cada registro anotamos cada sonido escuchado, su tipo, su intensidad y su ritmo, y medimos el nivel con una aplicación de decibeles. Cada kami de esta página nace de uno de esos registros.</p>
+        </article>
+        <article class="bloque revelar">
+          <span class="bloque__n etiqueta">5 / 5</span>
+          <h3>Cómo recorrerla</h3>
+          <p>Mira el campo: cada kami es un momento. Toca uno para conocer los sonidos que lo forman y lo que vio quien estuvo ahí. Dentro, descorre el velo capa por capa y escucha qué queda.</p>
+        </article>
+      </div>
+
+      <!-- Los lugares, del mar hacia el interior: un punto por cada sonido anotado -->
+      <div class="registro revelar">
+        <p class="etiqueta registro__titulo">
+          Registro · <span data-dato="fichas">··</span> momentos · <span data-dato="sonidos">··</span> sonidos · un punto por sonido
+        </p>
+        <ol class="lugares-franja" id="lugares-franja"></ol>
+      </div>
+    </section>
+
+    <!-- 3 · Campo de kamis (propuesta B) -->
+    <section class="lamina" id="campo">
+      <div class="lamina__rotulo"><span class="etiqueta">Lámina 02 · El campo</span></div>
+
+      <div class="campo">
+        <aside class="campo__lectura">
+          <p class="etiqueta">Cómo se lee</p>
+          <p class="solo-campo">Cada kami es un momento de 10 minutos. Más alto, más fuerte sonaba. Su cuerpo son los sonidos que se oyeron; su halo, el velo que los cubría.</p>
+          <p class="solo-velos">Cada kami es un momento de 10 minutos. Su cuerpo son los sonidos que se oyeron.</p>
+          <p class="etiqueta">Especies</p>
+          <ul class="especies leyenda mono">
+            <li><canvas data-muestra="Personas" width="40" height="16"></canvas>Personas</li>
+            <li><canvas data-muestra="Tránsito" width="40" height="16"></canvas>Tránsito</li>
+            <li><canvas data-muestra="Máquinas" width="40" height="16"></canvas>Máquinas</li>
+            <li><canvas data-muestra="Naturaleza" width="40" height="16"></canvas>Naturaleza</li>
+          </ul>
+
+          <p class="etiqueta">Patrón</p>
+          <ul class="leyenda mono">
+            <li><svg width="40" height="16" aria-hidden="true"><line x1="2" y1="8" x2="38" y2="8" stroke="currentColor" stroke-width="1.5"/></svg>continuo</li>
+            <li><svg width="40" height="16" aria-hidden="true"><line x1="2" y1="8" x2="38" y2="8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 3"/></svg>intermitente</li>
+            <li><svg width="40" height="16" aria-hidden="true"><line x1="2" y1="8" x2="38" y2="8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/></svg>puntual</li>
+          </ul>
+
+          <p class="etiqueta">Brazo y velo</p>
+          <p class="campo__nota mono solo-campo">Un brazo por sonido; más largo, más intenso (1–5). El velo va del dB mínimo al máximo del momento y se recorta en los bordes del campo (50–80 dB).</p>
+          <p class="campo__nota mono solo-velos">Un brazo por sonido; más largo, más intenso (1–5).<br><br>
+            Escena de velos: cada lugar es un campo de curvas de nivel. Más curvas, más fuerte en promedio (una cada 3 dB sobre 50). Curvas más apretadas, lugar más inestable (mayor diferencia entre mín. y máx.).<br><br>
+            Sus kamis flotan dentro, sin ejes: giran alrededor del centro según la hora, como un reloj desde las 09:30 arriba, y están más cerca del centro cuanto más fuerte sonaban.</p>
+        </aside>
+
+        <div class="campo__principal">
+          <!-- Botones 01–04: los genera script.js desde los datos -->
+          <div class="campo__barra">
+            <div class="lugares" id="filtro-lugares" role="group" aria-label="Filtrar por lugar"></div>
+            <!-- Reloj del registro: 20 s en pantalla = 10 min en terreno -->
+            <div class="campo__reloj mono">
+              <span id="campo-minuto" aria-live="off">00:00 / 10:00</span>
+              <button class="lugar-btn" type="button" id="campo-pausa" aria-pressed="false">Pausa</button>
+              <button class="lugar-btn" type="button" id="campo-modo" aria-pressed="false">Escena de velos ⇄</button>
+            </div>
+          </div>
+          <div class="campo__marco">
+            <div class="campo__lienzo" id="campo-lienzo">
+              <canvas id="campo-canvas" role="img" aria-label="Campo de kamis: cada momento registrado ubicado según su hora (eje horizontal) y su nivel promedio de decibeles (eje vertical)."></canvas>
+              <div class="campo__etiqueta mono" id="campo-etiqueta" hidden></div>
+            </div>
+          </div>
+          <!-- Lista para lectores de pantalla (los mismos datos que el dibujo) -->
+          <ul class="solo-lector" id="campo-lista"></ul>
+        </div>
+      </div>
+      <!-- Ficha (etapa 5) y mezclador (etapa 6) se abrirán desde un clic en un kami. -->
+    </section>
+
+    <!-- 4 · Mesa de mezcla: el usuario arma su kami y se compara con los registrados -->
+    <section class="lamina" id="mesa">
+      <div class="lamina__rotulo"><span class="etiqueta">Lámina 03 · La mesa de mezcla</span></div>
+      <h2>Mezcla tu kami</h2>
+      <p class="mesa__intro">Arma un momento del Barrio Puerto con tus propias capas de sonido: cuántos sonidos de cada especie, qué tan fuertes y con qué ritmo. Mientras mezclas, buscamos entre los <span data-dato="fichas">··</span> momentos registrados el que más se le parece.</p>
+
+      <div class="mesa">
+        <div class="mesa__kami">
+          <canvas id="mesa-canvas" role="img" aria-label="Tu kami, dibujado con las mismas reglas que los kamis registrados"></canvas>
+          <p class="mono mesa__reloj" id="mesa-reloj"></p>
+          <button class="ficha__mezclar" type="button" id="mesa-sonar" aria-pressed="false">▶ Escuchar tu mezcla</button>
+          <p class="mono mezclador__nota" id="mesa-estado"></p>
+        </div>
+
+        <div class="mesa__controles">
+          <div class="mesa__nivel">
+            <label class="etiqueta" for="mesa-db">Nivel del lugar · <output id="mesa-db-valor">65 dB</output></label>
+            <input type="range" id="mesa-db" min="50" max="80" step="1" value="65">
+            <p class="mono mezclador__nota">Más fuerte, más denso el velo: el sonido se oye más lejano y difuso.</p>
+          </div>
+          <div class="mesa__especies" id="mesa-especies"></div>
+          <button class="lugar-btn" type="button" id="mesa-azar">Mezcla al azar</button>
+        </div>
+      </div>
+
+      <div class="mesa__resultado" id="mesa-resultado" aria-live="polite"></div>
+
+      <p class="mono mezclador__aviso mesa__aviso">
+        Audio referencial: grabaciones de Valparaíso (Félix Blume) y de Freesound, procesadas para sonar como detrás de un velo.
+        Los volúmenes son estimados. La comparación busca el momento registrado más cercano; ninguno es idéntico a tu mezcla.
+      </p>
+    </section>
+
+    <!-- 5 · Créditos -->
+    <section class="lamina" id="creditos">
+      <div class="lamina__rotulo"><span class="etiqueta">Lámina 04 · Créditos</span></div>
+      <p class="mono">
+        Datos: Grupo 2, Taller de Diseño de Servicios 2026, e[ad] PUCV ·
+        <span data-dato="fichas">··</span> registros · <span data-dato="sonidos">··</span> sonidos anotados ·
+        <span data-dato="lugares">··</span> lugares.<br>
+        Visualización: Mateo Mackay.
+      </p>
+      <p class="etiqueta creditos__titulo">Sonidos (referenciales, procesados en la página)</p>
+      <ul class="creditos-audio mono" id="creditos-audio"></ul>
+      <p class="mono mezclador__nota">«M-retroceso» se sintetiza en el código. CC0: dominio público · CC BY: atribución requerida.</p>
+    </section>
+  </main>
+
+  <!-- Nivel 2 · Ficha de un kami (se abre al tocar un kami en el campo) -->
+  <dialog class="ficha" id="ficha" aria-labelledby="ficha-lugar">
+    <header class="ficha__cabeza">
+      <div class="ficha__titulo">
+        <span class="ficha__n display" id="ficha-n">01</span>
+        <div>
+          <h2 class="ficha__lugar display" id="ficha-lugar">Lugar</h2>
+          <p class="mono ficha__meta" id="ficha-meta"></p>
+        </div>
+      </div>
+      <nav class="ficha__nav mono" aria-label="Recorrer kamis">
+        <button class="lugar-btn" type="button" id="ficha-ant" aria-label="Kami anterior">←</button>
+        <span id="ficha-pos"></span>
+        <button class="lugar-btn" type="button" id="ficha-sig" aria-label="Kami siguiente">→</button>
+        <button class="lugar-btn" type="button" id="ficha-cerrar">Cerrar ✕</button>
+      </nav>
+    </header>
+
+    <div class="ficha__cuerpo">
+      <!-- El kami abierto: brazos separados en cuadrantes por especie -->
+      <section class="ficha__kami" aria-label="El kami abierto">
+        <div class="ficha__lienzo" id="ficha-lienzo">
+          <canvas id="ficha-canvas" aria-hidden="true"></canvas>
+          <div id="ficha-rotulos"></div>
+        </div>
+        <p class="ficha__reloj mono" id="ficha-reloj"></p>
+      </section>
+
+      <div class="ficha__columna">
+      <div class="ficha__datos" id="ficha-info">
+        <section>
+          <p class="etiqueta">Nivel del momento</p>
+          <div class="db-barra" id="ficha-db"></div>
+          <p class="mono ficha__conteos" id="ficha-conteos"></p>
+        </section>
+
+        <section>
+          <p class="etiqueta">Lo que sonó</p>
+          <ol class="ficha__sonidos mono" id="ficha-sonidos"></ol>
+        </section>
+
+        <section class="ficha__voz" id="ficha-voz">
+          <p class="etiqueta">Lo que vio quien estuvo ahí</p>
+          <div id="ficha-textos"></div>
+        </section>
+
+        <p class="mono ficha__revision" id="ficha-revision" hidden></p>
+
+        <!-- Entrada al nivel 3 -->
+        <button class="ficha__mezclar" type="button" id="ficha-mezclar">Descorrer el velo →</button>
+      </div>
+
+      <!-- Nivel 3 · Mezclador: una lámina translúcida por especie -->
+      <div class="ficha__datos mezclador" id="ficha-mezclador" hidden>
+        <section>
+          <h3 class="mezclador__titulo display">Descorrer el velo</h3>
+          <p class="mezclador__intro">Cada lámina es una especie de sonido de este momento. Descórrela para silenciarla y mira qué queda detrás del velo.</p>
+        </section>
+
+        <section>
+          <p class="etiqueta">Láminas</p>
+          <div class="laminas" id="mezclador-laminas" role="group" aria-label="Capas de sonido por especie"></div>
+        </section>
+
+        <section>
+          <p class="etiqueta">Velo</p>
+          <div class="velo-medidor" aria-hidden="true"><div id="mezclador-velo-barra"></div></div>
+          <p class="mono mezclador__nota" id="mezclador-velo"></p>
+        </section>
+
+        <section>
+          <p class="etiqueta">Escuchar</p>
+          <button class="ficha__mezclar" type="button" id="mezclador-sonar" aria-pressed="false">▶ Escuchar</button>
+          <p class="mono mezclador__nota" id="mezclador-estado"></p>
+          <p class="mono mezclador__nota" id="mezclador-volumen"></p>
+        </section>
+
+        <p class="mono mezclador__aviso">
+          Audio referencial: grabaciones de Valparaíso (Félix Blume) y de Freesound, no registradas en estos momentos.
+          Los volúmenes son estimados a partir de la intensidad percibida (1–5); los dB son del ambiente total.
+        </p>
+
+        <div class="mezclador__acciones">
+          <button class="lugar-btn" type="button" id="mezclador-volver">← Volver a la ficha</button>
+          <button class="lugar-btn" type="button" id="mezclador-mesa">Llevar este kami a la mesa de mezcla →</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="pie mono">
+    <span>Taller de Diseño de Servicios 2026 · Grupo 2</span>
+    <a href="proyecto.html">Cómo se hizo →</a>
+  </footer>
+</body>
+</html>

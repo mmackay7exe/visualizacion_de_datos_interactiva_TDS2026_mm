@@ -1,0 +1,4 @@
+Audios del mezclador (referenciales).
+Un archivo .mp3 por familia de sonido, con el nombre exacto de la familia: P-voces.mp3, T-micros.mp3, etc.
+La lista completa y sus fuentes estan en 01_Datos/sonidos/lista_sonidos.md.
+M-retroceso no necesita archivo: se sintetiza en el codigo.

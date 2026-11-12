@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fundamento del proyecto Halos Sonoros en la Ciudad Puerto: Genius Loci, trabajo de terreno, datos y decisiones de diseño.">
+  <title>Proyecto · Halos Sonoros</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+  <!-- Solo los caracteres de 鎮守の神 y 鎮守の森 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&text=%E9%8E%AE%E5%AE%88%E3%81%AE%E7%A5%9E%E6%A3%AE&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body class="pagina-proyecto">
+  <header class="barra">
+    <a class="barra__marca" href="index.html">Halos Sonoros <span>· Barrio Puerto</span></a>
+    <nav class="barra__nav" aria-label="Páginas">
+      <a href="index.html">Visualización</a>
+      <a href="proyecto.html" aria-current="page">Proyecto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Inicio -->
+    <section class="lamina" id="inicio">
+      <div class="lamina__rotulo"><span class="etiqueta">El proyecto</span></div>
+      <h1 class="display proyecto__titulo">Cómo se hizo</h1>
+      <p class="texto proyecto__bajada">
+        El fundamento de la visualización: de dónde viene la idea, qué se registró en terreno,
+        cómo se construyeron los datos y por qué se ven como se ven.
+      </p>
+      <ol class="indice">
+        <li><a href="#genius-loci"><b>01</b>Genius Loci · <span lang="ja" class="kanji">鎮守の神</span></a></li>
+        <li><a href="#pregunta"><b>02</b>La pregunta</a></li>
+        <li><a href="#terreno"><b>03</b>El trabajo de terreno</a></li>
+        <li><a href="#datos"><b>04</b>Cómo se construyeron los datos</a></li>
+        <!-- INACTIVAS hasta revisarlas: para mostrarlas, quitar "hidden" aquí y en sus secciones,
+             y devolver el número 07 a Créditos (aquí y en su rótulo). -->
+        <li hidden><a href="#decisiones"><b>05</b>Decisiones de diseño</a></li>
+        <li hidden><a href="#referencias"><b>06</b>Referencias</a></li>
+        <li><a href="#creditos"><b>05</b>Créditos</a></li>
+      </ol>
+    </section>
+
+    <!-- 01 -->
+    <section class="lamina" id="genius-loci">
+      <div class="lamina__rotulo"><span class="etiqueta">01 · Genius Loci · Chinju no Kami</span></div>
+      <h2>El espíritu del lugar</h2>
+      <div class="proyecto__dos">
+        <div class="texto">
+          <h3>Genius Loci</h3>
+          <p>Para los romanos, cada lugar tenía un espíritu protector propio: el <i>genius loci</i>. En el siglo XX la arquitectura recuperó la idea —Christian Norberg-Schulz, en <i>Genius Loci: hacia una fenomenología de la arquitectura</i> (1979)— para hablar del carácter de un sitio: aquello que hace que un lugar sea ese lugar y no otro.</p>
+
+          <h3><span lang="ja" class="kanji">鎮守の神</span> · Chinju no Kami</h3>
+          <p>En Japón, la deidad que protege una localidad, ligada a un santuario y al bosque que lo rodea (<span lang="ja" class="kanji">鎮守の森</span>, <i>chinju no mori</i>). No está en todas partes: pertenece a un lugar y lo cuida.</p>
+
+          <h3>Dos nombres para una misma intuición</h3>
+          <p>Dos tradiciones lejanas coinciden en algo: un lugar tiene un carácter que lo habita. Esta pieza toma esa idea y la busca en el sonido. Cada momento registrado en terreno se dibuja como un <b>kami</b>, una pequeña presencia hecha de lo que se oyó; el espíritu de cada lugar es el conjunto de sus kamis.</p>
+        </div>
+        <blockquote class="proyecto__cita">
+          Cada lugar tiene un halo, un sentir, una experiencia hecha de lo que suena alli. En nuestros registros ese "espíritu" está cubierto por un velo de motores, voces y máquinas. Registramos <span data-dato="fichas">··</span> momentos. Esto es lo que habita detrás.
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="lamina" id="pregunta">
+      <div class="lamina__rotulo"><span class="etiqueta">02 · La pregunta</span></div>
+      <h2>¿Quién habita detrás del ruido?</h2>
+      <div class="texto">
+        <p>El Barrio Puerto de Valparaíso suena fuerte: micros, camiones, bocinas, grúas, voces que ofrecen paseos en lancha. Ese ruido no es solo molestia; se superpone como un <b>velo</b> que cambia según la hora y el espacio, y que decide si las personas se quedan o siguen de largo.</p>
+        <p>Esta visualización no es un mapa de contaminación acústica. Pregunta otra cosa: si se descorre ese velo capa por capa, <b>¿quién habita realmente cada lugar?</b> ¿El mar, las personas, las máquinas del puerto? ¿Y ese lugar invita a quedarse o aleja?</p>
+        <p>Para responder no hay que resolver nada ni dar un diagnóstico: hay que mostrar lo que se escuchó, con honestidad, y dejar que cada quien lo recorra.</p>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="lamina" id="terreno">
+      <div class="lamina__rotulo"><span class="etiqueta">03 · El trabajo de terreno</span></div>
+      <h2>Cuatro lugares, del mar hacia el interior</h2>
+      <div class="proyecto__dos">
+        <div class="texto">
+          <p><span data-dato="periodo">En 2026</span>, el Grupo 2 del Taller de Diseño de Servicios (e[ad] PUCV) observó cuatro lugares del Barrio Puerto, numerados desde el borde costero hacia el interior. Cada registro es un momento de unos 10 minutos en un punto fijo.</p>
+
+          <h3>Qué se anotó en cada ficha</h3>
+          <ul class="lista">
+            <li>Cada sonido escuchado: su fuente, su tipo (humano, vehículo, comercio, naturaleza, máquina u otro), su intensidad percibida de 1 a 5, cuántas veces ocurrió y su patrón: continuo, intermitente o puntual.</li>
+            <li>El nivel sonoro con una aplicación de decibeles: mínimo, promedio y máximo.</li>
+            <li>El flujo de personas y de vehículos, y cuántos pasaron en 10 minutos.</li>
+            <li>Una evaluación de 1 a 5: intensidad general, diversidad, agrado y facilidad para distinguir los sonidos.</li>
+            <li>Textos de quien observó: situación destacada, hechos, interpretación y bitácora. Son la voz humana de la pieza.</li>
+          </ul>
+
+          <h3>Con qué se midió</h3>
+          <p>Los niveles se midieron con aplicaciones de teléfono o reloj: <span id="lista-equipos">··</span>. No son mediciones calibradas; sirven para comparar momentos entre sí, no como cifras oficiales.</p>
+
+      
+        </div>
+
+        <div>
+          <p class="etiqueta">Los lugares</p>
+          <ol class="tabla-lugares" id="tabla-lugares"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section class="lamina" id="datos">
+      <div class="lamina__rotulo"><span class="etiqueta">04 · Cómo se construyeron los datos</span></div>
+      <h2>De las fichas a los kamis</h2>
+      <div class="proyecto__dos">
+        <div class="texto">
+          <h3>1 · De papel a tabla</h3>
+          <p>Las fichas en PDF se pasaron a una base: <span data-dato="fichas">··</span> registros y <span data-dato="sonidos">··</span> sonidos, uno por fila. Cada registro conserva el código de la wiki del grupo (BP-01 a BP-40). Algunas fichas traían otro código escrito adentro y se reconciliaron; los tres instrumentos de un mismo registro de Piera (BP-17 a BP-19) quedaron como uno solo.</p>
+
+          <h3>2 · De tipos a especies</h3>
+          <p>Para dibujar, los tipos anotados se agrupan en cuatro especies:</p>
+          <table class="tabla mono">
+            <thead><tr><th>Especie</th><th>Tipos de la ficha</th><th>Ajustes</th></tr></thead>
+            <tbody>
+              <tr><td><i class="c-personas"></i>Personas</td><td>H humano · C comercio</td><td>la música de los locales</td></tr>
+              <tr><td><i class="c-transito"></i>Tránsito</td><td>V vehículo</td><td>semáforos, pitidos de cruce y bocinas de autos</td></tr>
+              <tr><td><i class="c-maquinas"></i>Máquinas</td><td>M máquina</td><td>bocinas de barco y remolcador</td></tr>
+              <tr><td><i class="c-naturaleza"></i>Naturaleza</td><td>N naturaleza</td><td>palomas anotadas como «otro»</td></tr>
+            </tbody>
+          </table>
+          <p>Cada ajuste quedó anotado en la base, para poder revisarlo.</p>
+
+          <h3>3 · Una familia de sonido para escuchar</h3>
+          <p>Cada sonido se asoció a una de 28 familias (voces, micros, grúas, oleaje…). Cada familia tiene un audio referencial: grabaciones de Valparaíso de Félix Blume y otras de Freesound, ninguna grabada en estos momentos.</p>
+
+          <h3>4 · Lo que todavía está en duda</h3>
+          <p><span data-dato="revision">··</span> fichas tienen notas de revisión pendientes con el grupo, y se muestran en la ficha de cada kami:</p>
+          <ul class="lista">
+            <li>BP-17: los dB mínimo (10) y máximo (121,4) anotados no son plausibles; solo se usa el promedio.</li>
+            <li>BP-10 y BP-11: el mínimo de 25 dB parece ser el piso de la aplicación, no una medición del lugar.</li>
+            <li>BP-16: la wiki la ubica en Plaza Echaurren, pero la ficha y sus sonidos son del Muelle Prat; se usa Muelle Prat.</li>
+            <li>BP-32: su sonido predominante es idéntico al de BP-31 y no corresponde al muelle.</li>
+            <li>BP-09: los dB escritos «5,8 / 6,7 / 8,9» se interpretaron como 58 / 67 / 89.</li>
+            <li>BP-13: tiene una séptima fuente anotada fuera de la tabla, sin eventos ni patrón.</li>
+          </ul>
+
+          <h3>Lo que no está</h3>
+          <p>Las 20 encuestas del grupo son otro instrumento y aún no se procesan. Los datos del artefacto del grupo quedan en espera.</p>
+        </div>
+
+        <div>
+          <p class="etiqueta">Primera lectura · por especie</p>
+          <table class="tabla mono" id="tabla-especies"></table>
+          <p class="mono proyecto__nota" id="dato-conviven"></p>
+          <p class="mono proyecto__nota">Plaza Echaurren tiene solo <span id="n-echaurren">··</span> registros: lo que se ve de ese lugar es un indicio, no una conclusión.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · INACTIVA hasta revisarla (quitar "hidden" para mostrarla) -->
+    <section class="lamina" id="decisiones" hidden>
+      <div class="lamina__rotulo"><span class="etiqueta">05 · Decisiones de diseño</span></div>
+      <h2>Nada porque sí</h2>
+      <p class="texto proyecto__bajada">Cada posición, tamaño y movimiento nace de un dato. Estas son las reglas.</p>
+
+      <div class="decisiones">
+        <article class="decision">
+          <h3>Honestidad con los datos</h3>
+          <p>Se muestran los <span data-dato="fichas">··</span> momentos; ninguno se omite ni se destaca a mano. Con tan pocos registros no se usan porcentajes. El audio se declara referencial y los volúmenes, estimados. Los datos dudosos se muestran como dudosos.</p>
+        </article>
+        <article class="decision">
+          <h3>El color es del sonido</h3>
+          <p>Todo el marco es monocromo: papel y tinta. Solo los sonidos tienen color, uno por especie.</p>
+          <ul class="especies mono">
+            <li><i class="c-personas"></i>Personas</li>
+            <li><i class="c-transito"></i>Tránsito</li>
+            <li><i class="c-maquinas"></i>Máquinas</li>
+            <li><i class="c-naturaleza"></i>Naturaleza</li>
+          </ul>
+        </article>
+        <article class="decision">
+          <h3>Tres voces</h3>
+          <p class="muestra mono">IBM Plex Mono · el instrumento: datos, ejes, etiquetas</p>
+          <p class="muestra">Source Serif 4 · la voz humana de quien observó</p>
+          <p class="muestra display">Anton · números, lugares, título</p>
+        </article>
+        <article class="decision">
+          <h3>El velo</h3>
+          <p>El ruido como desenfoque y grano alrededor de cada kami; el sonido que se propaga como anillos y curvas de nivel; encima, una capa de cuaderno de campo con etiquetas monoespaciadas.</p>
+        </article>
+        <article class="decision">
+          <h3>El campo</h3>
+          <p>Cada kami es un momento. Horizontal: la hora (09:30–19:15). Vertical: el dB promedio (50–80). Su velo va del mínimo al máximo. Tiene un brazo por sonido: el largo es la intensidad, el trazo el patrón, la forma y el color la especie.</p>
+        </article>
+        <article class="decision">
+          <h3>Cómo vive cada especie</h3>
+          <p>Las personas son racimos que respiran. El tránsito, una masa que estalla y se repliega. Las máquinas, trazos rígidos que vibran. La naturaleza, partículas que derivan. Un ciclo de 20 segundos equivale a los 10 minutos del registro: cada sonido se enciende cuando se oyó.</p>
+        </article>
+        <article class="decision">
+          <h3>La textura del agrado</h3>
+          <p>Los momentos que se evaluaron con poco agrado tienen bordes que tiemblan y cambios bruscos; los agradables, bordes suaves y fundidos lentos.</p>
+        </article>
+        <article class="decision">
+          <h3>Descorrer el velo</h3>
+          <p>En cada ficha, el mezclador separa el momento en cuatro láminas translúcidas, una por especie. Al quitar una, el velo se aclara en proporción a la intensidad que se fue, y el sonido se oye más cerca.</p>
+        </article>
+        <article class="decision">
+          <h3>Un audio que no es literal</h3>
+          <p>Las grabaciones pasan por un velo sonoro: un filtro y una reverberación que las vuelven lejanas y difusas, más cuanto más fuerte era el lugar. Cada sonido pesa según su intensidad, con el volumen general según los dB del momento.</p>
+        </article>
+        <article class="decision">
+          <h3>La mesa de mezcla</h3>
+          <p>Quien recorre la pieza puede armar su propio kami y lo compara con los momentos registrados: pesa más cuántos sonidos hay de cada especie, después la intensidad y el nivel, y al final el ritmo. Muestra el más cercano, nunca uno «igual».</p>
+        </article>
+        <article class="decision">
+          <h3>Dos lecturas</h3>
+          <p>El campo legible (propuesta B) se entiende con mínima leyenda. La escena de velos (propuesta A) es más atmosférica: cada lugar es un campo de curvas, una cada 3 dB sobre 50, más apretadas cuanto más inestable es el lugar.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 06 · INACTIVA hasta revisarla (quitar "hidden" para mostrarla) -->
+    <section class="lamina" id="referencias" hidden>
+      <div class="lamina__rotulo"><span class="etiqueta">06 · Referencias</span></div>
+      <h2>Qué tomamos de cada una</h2>
+      <p class="texto proyecto__bajada">Ninguna se copia: de cada una se saca una decisión que se conecta con los datos.</p>
+      <div class="referencias">
+        <figure class="ref"><img src="assets/img/referencias/ref01_editorial_tipografia_grande.jpg" alt="Web editorial con tipografía condensada enorme" loading="lazy"><figcaption><b>01</b> Web editorial con números gigantes. <span>Jerarquía extrema: texto enorme junto a texto mínimo → los lugares 01–04.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref02_imagen_fragmentada_indice.jpg" alt="Imagen fragmentada en celdas con etiquetas" loading="lazy"><figcaption><b>02</b> Imagen fragmentada con índice. <span>Etiquetas monoespaciadas numeradas → códigos BP, hora y dB.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref03_mapas_sonoros_radiales.jpg" alt="Mapas sonoros radiales" loading="lazy"><figcaption><b>03</b> Mapas sonoros radiales (autoría por verificar). <span>La más cercana: halo difuso como rango de escucha → la forma del kami. Nos diferenciamos en datos reales, movimiento y ejes legibles.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref04_interfaz_comparador_ciudades.jpg" alt="Interfaz comparadora de ciudades" loading="lazy"><figcaption><b>04</b> Comparador de ciudades. <span>Filtros claros a un costado y una frase corta de «cómo se lee».</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref05_web_pixel_rojo_monoespaciada.jpg" alt="Web de fondo beige y monoespaciada" loading="lazy"><figcaption><b>05</b> Web beige, un color, monoespaciada. <span>Papel cálido y un solo color fuerte; texto vertical.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref06_dibujo_anotado.jpg" alt="Escultura dibujada con anotaciones" loading="lazy"><figcaption><b>06</b> Dibujo anotado. <span>Cuaderno de campo: líneas guía y notas → la ficha.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref07_obras_asimov_flujo.jpg" alt="Obras de Asimov como flujo en el tiempo" loading="lazy"><figcaption><b>07</b> Obras de Asimov. <span>Bloque «cómo se lee» y eje de tiempo con marcas punteadas.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref08_100_fotografias_dispersion.jpg" alt="100 fotografías en dos ejes" loading="lazy"><figcaption><b>08</b> 100 fotografías en dos ejes. <span>Dos ejes con significado → hora × dB.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref09_afiche_degradado_grano.jpg" alt="Afiche con degradado granulado" loading="lazy"><figcaption><b>09</b> Afiche con degradado y grano. <span>Textura del velo.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref10_curvas_de_nivel.jpg" alt="Curvas de nivel" loading="lazy"><figcaption><b>10</b> Curvas de nivel. <span>Isolíneas que se aprietan → la escena de velos.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref11_volumen_traslucido.jpg" alt="Volumen translúcido" loading="lazy"><figcaption><b>11</b> Volumen translúcido. <span>Capas superpuestas → las láminas del mezclador.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref12_people_talking_serra.jpg" alt="People Talking, de Jaime Serra" loading="lazy"><figcaption><b>12</b> <i>People Talking</i> — Jaime Serra. <span>Anillos de color por persona; leyenda por familias de color.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref13_web_texto_vertical.jpg" alt="Web con texto vertical" loading="lazy"><figcaption><b>13</b> Web con texto vertical. <span>Aire y calma → la portada y el Genius Loci.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref14_collage_laminas.jpg" alt="Collage con láminas numeradas" loading="lazy"><figcaption><b>14</b> Collage con láminas numeradas. <span>«Lámina 01», trazos de construcción.</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref15_afiche_desenfoque.jpg" alt="Afiche desenfocado sobre grilla" loading="lazy"><figcaption><b>15</b> Afiche desenfocado sobre grilla. <span>Lo borroso (sonido) sobre lo nítido (ejes y datos).</span></figcaption></figure>
+        <figure class="ref"><img src="assets/img/referencias/ref16_desenfoque_transicion_kanji.jpg" alt="Transición con desenfoque" loading="lazy"><figcaption><b>16</b> Transición con desenfoque. <span>El paso de <span lang="ja" class="kanji">鎮守の神</span> a Genius Loci en la portada.</span></figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 07 -->
+    <section class="lamina" id="creditos">
+      <div class="lamina__rotulo"><span class="etiqueta">05 · Créditos</span></div>
+      <h2>Créditos</h2>
+      <div class="proyecto__dos">
+        <dl class="creditos mono">
+          <dt>Visualización y diseño</dt><dd>Mateo Mackay</dd>
+          <dt>Registros de terreno</dt><dd id="creditos-observadores">··</dd>
+          <dt>Contexto</dt><dd>Grupo 2 · Taller de Diseño de Servicios 2026 · e[ad] Escuela de Arquitectura y Diseño, PUCV</dd>
+          <dt>Tipografías</dt><dd>IBM Plex Mono, Source Serif 4, Anton y Noto Serif JP (Google Fonts, licencia SIL Open Font)</dd>
+          <dt>Herramientas</dt><dd>HTML, CSS y JavaScript (canvas y Web Audio); ffmpeg para preparar los audios</dd>
+        </dl>
+        <div>
+          <p class="etiqueta">Sonidos (referenciales, procesados en la página)</p>
+          <ul class="creditos-audio mono" id="creditos-audio"></ul>
+          <p class="mono mezclador__nota">«M-retroceso» se sintetiza en el código. CC0: dominio público · CC BY: atribución requerida.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie mono">
+    <span>Taller de Diseño de Servicios 2026 · Grupo 2</span>
+    <a href="index.html">← Volver a la visualización</a>
+  </footer>
+</body>
+</html>
